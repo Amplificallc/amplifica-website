@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+
+body{
+    scroll-behavior:  smooth;
+    background-color:white ;
+    font-family: 'Prompt', sans-serif;
+}
+nav,.contact-btn
+{
+    font-family: 'Poppins',sans-serif;
+}
+.active-mobile
+{
+    font-weight: bold;
+}
+.active-mobile{
+    font-weight: bold;
+    color: #BDFF00;
+}
+.navabar
+{
+    height: 1090px;
+}
