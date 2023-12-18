@@ -4,6 +4,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const Landing = () => {
+  interface serviceProps{
+    id: number,
+    title:string,
+    subtext: string,
+    mainText: string,
+    src: string
+  }
   const [activeTab, setActiveTab] = useState(0)
   const services=[
     {
@@ -48,21 +55,21 @@ const Landing = () => {
       title: "Product Strategy & Consulting",
       subtext: "Guiding your vision from conception to execution.",
       mainText: "Navigating the digital landscape requires a comprehensive strategy. Our seasoned consultants work closely with you to define and refine your product strategy. From market analysis and competitor research to product roadmap planning and execution, we provide actionable insights and guidance every step of the way. Let us help you transform your vision into a well-defined and successful product.",
-      src: "/web.gif"
+      src: "/sc.gif"
     },
     {
       id:4,
       title: "Quality Assurance & Testing",
       subtext: "Ensuring impeccable performance and reliability.",
       mainText: "Quality is paramount in everything we deliver. Our dedicated QA experts ensure that your software is thoroughly tested across multiple scenarios and environments. From functionality and performance to security and scalability, we conduct rigorous testing to guarantee a flawless end-user experience. Trust us to identify and address any issues before deployment, ensuring a polished and reliable product.",
-      src: "/web.gif"
+      src: "/qa.gif"
     },
     {
       id:5,
       title: "Maintenance and Support",
       subtext: "Standing by your side post-launch to guarantee continued success.",
       mainText: "Our commitment to your success extends beyond the launch phase. We offer comprehensive maintenance and support services to keep your software running smoothly. Whether it's updates, troubleshooting, or enhancements, our support team remains accessible to address your concerns and ensure the continued optimal performance of your application. Count on us for ongoing assistance, allowing you to focus on your core business while we handle the technical aspects.  ",
-      src: "/web.gif"
+      src: "/m.gif"
     },
    ]
   return (
@@ -112,7 +119,7 @@ const Landing = () => {
               <button
                 key={service.id}
                 className={`${
-                  activeTab === id ? 'backdrop-blur-3xl bg-main/100 text-white' : 'hover:border-main backdrop-blur-3xl bg-main/10'
+                  activeTab === id ? 'backdrop-blur-3xl bg-main/100 text-green-900 font-bold' : 'hover:border-main backdrop-blur-3xl bg-main/10'
                 } rounded-md border border-transparent hover:border-main backdrop-blur-3xl bg-main/10 text-main font-medium px-3 py-3`}
                 onClick={() => setActiveTab(id)}
               >
@@ -130,7 +137,7 @@ const Landing = () => {
                 <h4 className='text-main font-medium text-lg'>{serviceD.subtext}</h4>
                 <p className='text-white font-normal text-md'>{serviceD.mainText}</p>
                 <Link href=''>
-                  <button className='rounded-lg border border-main backdrop-blur-3xl bg-main/10 text-main px-3 py-3'>
+                  <button className='rounded-lg border border-main backdrop-blur-3xl bg-main/10 text-main px-3 py-3 hover:bg-main hover:text-black hover:font-bold'>
                     Request A Quote
                   </button>
                 </Link>
@@ -140,6 +147,15 @@ const Landing = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+      <section className='flex flex-row justify-center items-center bg-main px-4 py-10 mx-24 rounded-xl'>
+        <div className='w-1/2 flex flex-col items-start justify-start'>
+          <h1 className='text-grey font-normal text-4xl'>Our <span className='font-semibold'>Approach</span></h1>
+          <p></p>
+        </div>
+        <div className='w-1/2'>
+          <h3>Video</h3>
         </div>
       </section>
     </main>
