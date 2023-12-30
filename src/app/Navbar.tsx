@@ -17,7 +17,7 @@ const handleMenuClose=()=>
 {
     setMenuOpen(false);
 }
-interface navlink{
+  interface navlink{
     id:number,
     text: string,
     path: string,
@@ -37,26 +37,32 @@ const navlinks:navlink[]=[
     },
     {
         id: 3,
-        text: 'Approach',
-        path: "/our-approach"
+        text: 'Careers',
+        path: "/careers"
     },
     {
         id: 4,
-        text: 'Blog',
-        path: "/blog"
+        text: 'Contact',
+        path: "/contact"
     }
 ]
 const pathname = usePathname();
   return (
-   <header className="fixed top-0 left-0 z-40 right-0 h-14 shadow-md bg-white flex flex-row justify-between items-center shrink-0 px-10 lg:px-24 py-10 ">
-    <div className="logo-section">
+   <header className="relative h-14 bg-white flex flex-row justify-between items-center px-2 lg:px-24 py-10 ">
+    <section className=" flex flex-row justify-center items-center space-x-48 px-3">
+    <div className="logo-section mt-3">
         <Link href="/home">
-            <Image src={'/Logo-main.png'} width={30} height={30} alt="amplifica"/>
+            <Image src={'/Logo-main.png'} width={200} height={30} alt="amplifica"/>
         </Link>
     </div>
+    <div className="lg:hidden">
+        <RiMenu3Fill  className="text-black text-3xl font-bold hover:text-main" onClick={handleMenuOpen}/>
+        </div>
+    </section>
+   
 
     <div className= 'lg:hidden'>
-        <RiMenu3Fill  className="text-white text-3xl font-bold hover:text-main" onClick={handleMenuOpen}/>
+       
            {/* Mobile Menu */}
          {
             menuOpen && 
@@ -79,15 +85,15 @@ const pathname = usePathname();
                     }
                 }
                  className="navabar fixed z-40 top-0 right-0  w-full  bg-main flex-col py-16 justify-even items-center ">
-                    <div className="absolute top-3 right-5 text-3xl" onClick={handleMenuClose}>
-                    <RiCloseCircleLine />
+                    <div className="absolute top-3 right-5 text-4xl" onClick={handleMenuClose}>
+                    <RiCloseCircleLine className="text-white" />
                     </div>
                     
 
                 {navlinks.map((navlink, id)=>
                 (
                    <div key={navlink.id} className="text-3xl py-6 px-6">
-                    <Link href={navlink.path} className={` text-black nav-link text-md font-light ${pathname === navlink.path ? 'active': "" }  hover:font-bold font-medium`} onClick={handleMenuClose}>{navlink.text}</Link>
+                    <Link href={navlink.path} className={` text-white nav-link text-md font-light ${pathname === navlink.path ? 'active': "" }  hover:font-bold font-medium`} onClick={handleMenuClose}>{navlink.text}</Link>
                    </div> 
                 ))}
                     </motion.nav>
@@ -101,18 +107,12 @@ const pathname = usePathname();
     <nav className="navabar-desktop hidden lg:flex w-full bg-transparent  flex-row justify-even items-center space-x-10">
     {navlinks.map((navlink, id)=>
     (
-       <div key={navlink.id} className="text-lg">
-        <Link href={navlink.path} className={`text-black nav-link text-md font-light ${pathname === navlink.path ? 'active': "" }  hover:font-bold lg:hover:text-main lg:hover:font-semibold font-medium`}>{navlink.text}</Link>
+       <div key={navlink.id} className="text-md">
+        <Link href={navlink.path} className={`text-black nav-link text-md font-normal ${pathname === navlink.path ? 'active': "" }  hover:font-bold lg:hover:text-main lg:hover:font-semibold font-medium`}>{navlink.text}</Link>
        </div> 
     ))}
         </nav>
         </div>
-    
-<div className="contact-button hidden lg:block">
-    <Link href="/contact">
-        <button className="contact-btn bg-main w-40 h-12 font-semibold text-md rounded-md text-black hover:scale-x-100">Contact Us</button>
-    </Link>
-</div>
    </header>
   )
 }
