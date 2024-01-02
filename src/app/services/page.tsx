@@ -10,18 +10,7 @@ const page = () => {
       <p className={`${styles.main} py-2 text-md md:text-lg font-normal leading-tight md:w-3/4`}>Delve into our expertise and experience crafted to enhance Your business operations, innovation, and success story</p>
       </section>
       <section className='flex flex-col justify-center items-center space-y-24 md:px-16 px-2'>
-        <div className='flex  flex-col md:flex-row justify-between items-start md:items-center md:space-x-72 space-y-4 md:space-y-0'>
-        <div className='md:w-1/2'>
-          <Image src={'/hh.png'} width={600} height={300} alt='product design team'/>
-        </div>
-        <div className='md:w-1/2 space-y-2'>
-         <div>
-         <hr className='bg-main h-1 w-36'/>
-         <h1 className={`${styles.heading} text-black text-2xl font-semibold p-2`}>Strategy and Consulting</h1>
-         </div>
-          <p className={`${styles.heading} text-black text-md font-normal`}>Our team offers tailored solutions, leveraging market analysis, innovation strategies, and comprehensive consulting to optimize your business's potential. Let us partner in sculpting a roadmap that propels your enterprise towards sustainable growth and success.</p>
-        </div> 
-        </div>
+       
         <div className='flex  flex-col md:justify-between md:flex-row-reverse md:gap-5  justify-between items-start md:items-center  space-y-4 md:space-y-0'>
         <div className='md:w-1/2'>
           <Image src={'/webdev.jpg'} width={600} height={300} alt='product design team'/>
@@ -49,7 +38,7 @@ const page = () => {
         </div>
         <div className='flex  flex-col md:flex-row-reverse justify-between items-start md:items-center md:gap-5 space-y-4 md:space-y-0'>
         <div className='md:w-1/2'>
-          <Image src={'/pd.png'} width={600} height={300} alt='product design team'/>
+          <Image src={'/pd.png'} width={500} height={300} alt='product design team'/>
         </div>
         <div className='md:w-1/2 space-y-2'>
          <div>
@@ -57,6 +46,18 @@ const page = () => {
           <h1 className={`${styles.heading} text-black text-2xl font-semibold p-2`}>Product Design</h1>
          </div>
           <p className={`${styles.heading} text-black text-md font-normal`}>Our product design service is a meticulous blend of artistry and functionality, aimed at creating compelling experiences. From ideation to user testing, we sculpt interfaces that captivate and functionalities that resonate. Through a human-centric approach, we craft solutions that harmonize user needs with business objectives, breathing life into visionary concepts and shaping them into user-centric realities.</p>
+        </div> 
+        </div>
+        <div className='flex  flex-col md:flex-row justify-between items-start md:items-center md:space-x-72 space-y-4 md:space-y-0'>
+        <div className='md:w-1/2'>
+          <Image src={'/hh.png'} width={600} height={300} alt='product design team'/>
+        </div>
+        <div className='md:w-1/2 space-y-2'>
+         <div>
+         <hr className='bg-main h-1 w-36'/>
+         <h1 className={`${styles.heading} text-black text-2xl font-semibold p-2`}>Maintenance and Support</h1>
+         </div>
+          <p className={`${styles.heading} text-black text-md font-normal`}>Our team offers tailored solutions, leveraging market analysis, innovation strategies, and comprehensive consulting to optimize your business's potential. Let us partner in sculpting a roadmap that propels your enterprise towards sustainable growth and success.</p>
         </div> 
         </div>
       </section>

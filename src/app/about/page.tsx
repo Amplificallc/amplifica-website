@@ -12,7 +12,7 @@ const page = () => {
     <section className=" h-screen flex flex-col-reverse md:flex-row justify-center items-start px-2 md:px-16 md:py-4 mt-20">
       <div className='flex flex-col justify-center items-start md:w-1/2'>
       <h1 className='text-grey text-3xl md:text-6xl font-semibold leading-tight'>Unlocking the full prowess of every growing company through <span className=' text-main font-extrabold'>world-class</span> product development.</h1>
-      <p className=" text-lg leading-normal font-normal pt-4">Our innovative approach reshapes the process, unlocking unparalleled results that propel every company towards boundless success. Through meticulous strategy and relentless dedication, we craft solutions designed to elevate, ensuring your journey isn't just promising, but groundbreaking.</p>
+      <p className=" text-md w-11/12 leading-normal font-normal pt-4">Our innovative approach reshapes the process, unlocking unparalleled results that propel every company towards boundless success. Through meticulous strategy and relentless dedication, we craft solutions designed to elevate, ensuring your journey isn't just promising, but groundbreaking.</p>
       </div>
       <div className='md:w-1/2'>
         <Image src={'/abt.png'} width={3000} height={300} alt='amplifica-team' className='scale-075'/>

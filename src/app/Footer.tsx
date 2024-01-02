@@ -42,12 +42,12 @@ const Footer = () => {
     const privacylinks:navlink[]=[
     
         {
-            id: 1,
+            id: 5,
             text: 'Terms and Conditions',
             path: "/about"
         },
         {
-            id: 2,
+            id: 6,
             text: 'Privacy Policies',
             path: "/services"
         },
@@ -55,11 +55,11 @@ const Footer = () => {
     const contactlinks:contactlink[]=[
     
         {
-            id: 1,
+            id: 7,
             text: 'amplificallc@gmail.com'
         },
         {
-            id: 2,
+            id: 8,
             text: '(+233) 55 730 2022',
         },
     ]
